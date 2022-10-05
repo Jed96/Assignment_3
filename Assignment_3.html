@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1> Random Number Generator</h1>
+
+    <input id="myNumber" type="number" min="1" max="100">
+    <button onclick="generateNum()">Generate</button>
+    <p id="random"></p>
+
+    <script>
+        function generateNum(){
+
+            var getNum = document.getElementById("myNumber").value;  
+            let result = "<ul>";
+            for (let i = 0; i < getNum; i++) {
+
+                let x = Math.floor(Math.random() * 100);
+                result += "<li>" + x + "</li>";
+
+            }
+
+            document.getElementById("random").innerHTML = result; 
+        }      
+
+    </script>
+</body>
+</html>
